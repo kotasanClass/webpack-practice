@@ -1,5 +1,3 @@
-const { Module } = require("webpack");
-
 const path = require('path');
 
 const outputPath = path.resolve(__dirname, 'dist');
@@ -10,5 +8,8 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: outputPath
+  },
+  devServer: {
+    contentBase: outputPath
   }
 }
